@@ -1,0 +1,13 @@
+<a href="/option/beginning">back to beginning</a>
+<section class="wrapper">
+{{#each links }}
+{{#if this}}
+{{> link sentence=this.value opt=@ index id=this.id}}
+{{else}}
+{{> input opt=@ index action=@ index num=@ index}} 
+{{/if}}
+{{/each}}
+<div>
+      <p class="headtxt">once upon a time there was a big bad wolf</p>
+  </div>
+</section>

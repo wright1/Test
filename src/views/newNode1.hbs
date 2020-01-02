@@ -1,0 +1,11 @@
+<a href="/option/beginning">back to beginning</a>
+<section class="wrapper">
+    {{#each text.descendents }}
+    {{#if this}}
+    {{> link sentence=this.value opt=@ index id=this.id}}
+    {{else}}
+    {{> optionInput opt=@ index  id=@root.text.id }}
+    {{/if}}
+    {{/each}}
+    {{> headtext sentence=text.value}}
+</section>
